@@ -1,0 +1,75 @@
+/* Fondo con gradiente animado */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+    background: linear-gradient(-45deg, #c9cbce, #cfd0cb, #a19a81, #e1e5eb);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1, h2 {
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+ul {
+    list-style: square inside;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+/* Estilos del formulario */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: #ffffff;
+    color: #d4d8c9;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
