@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hola Yo Soy Rorry</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ebe9e4; /* Fondo color arena */
+      color: #5a0066; /* Texto marrón oscuro */
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .left, .right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    ul {
+      list-style: square inside;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    ul li {
+      background: rgba(78, 52, 46, 0.1);
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: rgba(78, 52, 46, 0.2);
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: #4e342e;
+      color: #f4e7d3;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Hola Yo Soy Rorry</h1>
+  <h2>A hippie / millionaire wannabe programmer,data analyst,fullstack aspirante a ser sstudiante de Ing.Software xdXD:3uXu </h2>
+
+  <div class="container">
+    <div class="left">
+      <h2>Estos son algunos de mis Hobbies/Pasatiempos</h2>
+      <ul>
+        <li>Jugar RocketLeague</li>
+        <li>Estudiar la Carrera Universitaria Ingeniería en Software de Hybridge</li>
+        <li>Ver Anime</li>
+        <li>Manejar mi Camaro pretendiendo ser Influencer Millonario Exitoso de YouTube o Tiktoker en Tendencia</li>
+        <li>Tratar de generar dinero en emprendimientos virtuales</li>
+        <li>Intentar conseguir novia y fracasar por ni siquiera intentarlo. <em>*Proceder a llorar*</em></li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <h2>Intenta Contactarme</h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" rows="4"></textarea>
+
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('¡Gracias por tu mensaje, Rorry te responderá pronto!');
+      form.reset();
+    });
+
+    document.querySelectorAll('ul li').forEach((item) => {
+      item.addEventListener('click', () => {
+        item.style.backgroundColor = 'rgba(0,0,0,0.1)';
+        item.style.color = 'darkorange';
+      });
+    });
+  </script>
+</body>
+</html>
